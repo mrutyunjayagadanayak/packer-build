@@ -5,12 +5,6 @@ terraform {
             version = ">= 2.26"
         }
     }
-    backend "azurerm" {
-        resource_group_name  = "cloud-shell-storage-centralindia"
-        storage_account_name = "csg1003200054b390c1"
-        container_name       = "tfstate_packer"
-        key                  = "terraform.tfstate"
-    }
 }
 
 provider "azurerm" {
