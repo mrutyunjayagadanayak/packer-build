@@ -19,16 +19,16 @@
        user: bapun
        key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBUR1nRjUPNJerJiuZsynyq3pj7yco939j2A+jCki+l5 mg@mg-Aspire-E5-575G"
 
-    - name: install apache and php for Ubuntu servers
-      tags: apache,apache2,Ubuntu
-      apt:
-       name:
-         - apache2
-         - libapache2-mod-php
-       state: latest  
+    #- name: install apache and php for Ubuntu servers
+    #  tags: apache,apache2,Ubuntu
+    #  apt:
+    #   name:
+    #     - apache2
+    #     - libapache2-mod-php
+    #   state: latest  
 
-    - name: install mariadb package (Ubuntu)
-      tags: db, Ubuntu
-      apt:
-       name: mariadb-server
-       state: latest
+    #- name: install mariadb package (Ubuntu)
+    #  tags: db, Ubuntu
+    #  apt:
+    #   name: mariadb-server
+    #   state: latest
