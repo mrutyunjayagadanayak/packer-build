@@ -21,6 +21,6 @@ resource "azurerm_resource_group" "rg" {
     name        = "myResourceGroup"
     location    = "centralindia"
     tags        = {
-        Environment = 'Temp'
+        Environment = "Temp"
     }
 }
