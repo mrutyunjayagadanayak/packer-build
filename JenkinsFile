@@ -40,4 +40,10 @@ pipeline {
             }
         }
     }
+    post {
+        success {
+            echo 'Run Terraform pipeline'
+            build 'terraform-azure-ansible'
+        }
+    }
 }
