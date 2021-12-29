@@ -12,6 +12,15 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/mrutyunjayagadanayak/packer-build'
             }
         }
+        
+        stage("Export Values") {
+            steps{
+                sh '''echo ARM_SUBSCRIPTION_ID=$ARM_SUBSCRIPTION_ID
+                echo ARM_TENANT_ID=$ARM_TENANT_ID
+                echo  ARM_CLIENT_ID=$ARM_CLIENT_ID
+                echo ARM_CLIENT_SECRET=$ARM_CLIENT_SECRET'''
+            }
+        }
 
         stage('Terraform Init') {
             steps {
