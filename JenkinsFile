@@ -33,6 +33,12 @@ pipeline {
                 sh 'terraform apply --auto-approve'
             }
         }
+        
+        stage('Azure Login') {
+            steps {
+                azureCLI commands: [[exportVariablesString: '', script: 'az login --service-principal --username $ARM_CLIENT_ID --password $ARM_CLIENT_SECRET --tenant $ARM_TENANT_ID']], principalCredentialId: 'azure-login1'
+            }
+        }
 
         stage('Packer Build') {
             steps {
